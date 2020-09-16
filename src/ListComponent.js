@@ -2,7 +2,7 @@ import React from 'react';
 import CardComponent from './CardComponent'
 
 const ListComponent = (props) => {
-    console.log(props)
+    //console.log(props)
     return (
         <div>
             
