@@ -1,14 +1,26 @@
 import React from 'react';
+import { connect } from 'react-redux'
+
 import CardComponent from './CardComponent'
 
-const ListComponent = (props) => {
-    //console.log(props)
+
+const ListComponent = ({ items }) => { //props.items
+
+    
     return (
         <div>
             
-        {props.items.map((item, index) => <CardComponent key={index} item={item}/>)} 
+        {items.map((item, index) => <CardComponent key={index} item={item}/>)} 
         </div>
     );
 };
 
-export default ListComponent;
+//what function gives access to store state?
+
+const mapStateToProps = state => {
+    return { items: state.items }
+}
+
+export default connect(mapStateToProps)(ListComponent);
+
+

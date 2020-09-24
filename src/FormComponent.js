@@ -32,3 +32,8 @@ class FormComponent extends Component {
 }
 
 export default FormComponent;
+
+
+// item that user submits ?? reduxland
+
+//when submitted we need to dispatch an action 
